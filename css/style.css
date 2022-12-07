@@ -1,0 +1,239 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: Arial, sans-serif;
+}
+/* titre de la page */
+h1 {
+  padding: 5px;
+  background-color: white;
+  text-align: center;
+}
+h1 a {
+  color: black;
+  text-decoration: none;
+}
+h1 a:hover {
+  color: black;
+}
+/* fin du titre de la page */
+/* MENU DEROULANT */
+nav ul {
+  list-style-type: none;
+}
+nav {
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  position: sticky;
+}
+
+nav li {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+nav ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 0px;
+  padding: 10px 0px;
+}
+nav a:hover {
+  color: white;
+  background-color: black;
+  border-radius: 0px;
+  transition: 0.3s;
+}
+/* fin du menu déroulant */
+/* PAGE ACCUEIL */
+.boxaccueil {
+  margin: 0;
+  padding: 0;
+  background-image: url(../image/fond.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.boxaccueil p {
+  margin-top: 100px;
+  margin-left: 100px;
+  color: white;
+  font-size: 250%;
+  text-align: left;
+}
+.boutonaccueil {
+  margin: 25px;
+  font-size: 50%;
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  border: white solid 3px;
+  padding: 0.8em 1em;
+  position: relative;
+  display: inline-block;
+}
+.boutonaccueil:hover {
+  color: white;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+/* Bandereau pour les autres pages */
+.box {
+  background-image: url(../image/fond2.png);
+  background-size: cover;
+  padding: 5em;
+}
+.box p {
+  color: white;
+  text-align: center;
+  font-size: 250%;
+}
+/* PAGE PROFIL */
+.Profil {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.profiltitre {
+  padding: 10px;
+}
+.Profil p {
+  margin-left: 20px;
+}
+.boutonCV {
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  border: black solid 2px;
+  padding: 0.8em 1em;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.boutonCV:hover {
+  color: black;
+  background-color: white;
+  transition: 0.5s;
+}
+/* PAGE CONTACT */
+/*Formulaire Contact*/
+.Contactez-moi {
+  display: flex;
+  justify-content: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Contactez-moi {
+  width: 700px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 0 50px 0 5px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.Contactez-moi > h2 {
+  display: block;
+  font-weight: 700;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.Contactez-moi > p {
+  font-weight: 300;
+  text-align: center;
+}
+
+form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 83px;
+  margin-top: 25px;
+  margin-left: 22px;
+}
+
+form div > label {
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+form div > input,
+form div > select,
+form div > textarea {
+  color: white;
+  background: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0px 2px 2px 0px grey;
+}
+
+form div > input,
+form div > select {
+  height: 50px;
+  padding-left: 10px;
+}
+
+form div > select {
+  appearance: none;
+  background-size: 15px;
+  background-position: right 10px top 50%;
+  background-repeat: no-repeat;
+}
+
+form div > textarea {
+  height: 195px;
+  padding: 10px 0px 0px 10px;
+}
+
+form div > input::placeholder,
+form div > textarea::placeholder {
+  color: white;
+}
+
+form div > select:invalid {
+  color: white;
+}
+
+form div > select option {
+  background: white;
+  color: black;
+}
+
+form div:last-child {
+  align-items: center;
+  margin-top: 20px;
+}
+
+form button {
+  width: 350px;
+  max-width: 400px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 20px;
+  background: black;
+  border: rgba(48, 48, 48, 0.5) solid 1px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+}
+form button:hover {
+  color: black;
+  background-color: white;
+  transition: 0.3s;
+}
+/* fin de formulaire de contact */

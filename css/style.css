@@ -3,21 +3,26 @@
   padding: 0%;
   font-family: Arial, sans-serif;
 }
-/* titre de la page */
-h1 {
-  padding: 5px;
+
+/***************************** TITRE DE LA PAGE *****************************/
+.header {
   background-color: white;
   text-align: center;
 }
-h1 a {
+.header h1 {
+  margin-bottom: 5px;
+}
+.header h1,
+a {
   color: black;
   text-decoration: none;
 }
-h1 a:hover {
+.header h1,
+a:hover {
   color: black;
 }
-/* fin du titre de la page */
-/* MENU DEROULANT */
+
+/***************************** MENU DÉROULANT *****************************/
 nav ul {
   list-style-type: none;
 }
@@ -25,7 +30,6 @@ nav {
   width: 100%;
   margin: 0 auto;
   background-color: white;
-  position: sticky;
 }
 
 nav li {
@@ -55,12 +59,12 @@ nav a:hover {
   border-radius: 0px;
   transition: 0.3s;
 }
-/* fin du menu déroulant */
-/* PAGE ACCUEIL */
+
+/***************************** PAGE D'ACCUEIL *****************************/
 .boxaccueil {
   margin: 0;
   padding: 0;
-  background-image: url(../image/fond.png);
+  background-image: url(../public/fondentier.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -88,9 +92,9 @@ nav a:hover {
   transition: 0.3s;
 }
 
-/* Bandereau pour les autres pages */
+/***************************** BANDEREAU *****************************/
 .box {
-  background-image: url(../image/fond2.png);
+  background-image: url(../public/fondbandeau.png);
   background-size: cover;
   padding: 5em;
 }
@@ -99,13 +103,16 @@ nav a:hover {
   text-align: center;
   font-size: 250%;
 }
-/* PAGE PROFIL */
+/***************************** PAGE PROFIL *****************************/
 .Profil {
   margin-left: 10%;
   margin-right: 10%;
 }
 .profiltitre {
   padding: 10px;
+}
+.Profil h3 {
+  margin-left: 20px;
 }
 .Profil p {
   margin-left: 20px;
@@ -125,7 +132,72 @@ nav a:hover {
   background-color: white;
   transition: 0.5s;
 }
-/* PAGE CONTACT */
+
+/***************************** PAGE PROJETS *****************************/
+.introduction p {
+  text-align: center;
+  margin-top: 10px;
+}
+.typeprojettitre h1 {
+  padding-left: 10%;
+  margin-top: 20px;
+  text-align: left;
+}
+.tabprojet {
+  background-color: lightgrey;
+  margin: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.tabprojet table {
+  width: 100%;
+  background-color: transparent;
+}
+.tabprojet table,
+td {
+  border: rgb(173, 13, 13) solid 2px;
+}
+.tabprojet table,
+td,
+h1 {
+  background-color: transparent;
+  text-align: center;
+  margin-top: 5px;
+}
+.tabprojet thead,
+tfoot {
+  color: white;
+  background-color: rgb(173, 13, 13);
+  font-size: 150%;
+}
+.tabprojet td,
+p {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: left;
+}
+.boutongithub {
+  color: black;
+  text-decoration: none;
+  margin-left: 10px;
+  background-color: white;
+  border: black solid 2px;
+  padding: 0.5em 0.75em;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.boutongithub:hover {
+  color: white;
+  background-color: rgb(173, 13, 13);
+  border: rgb(173, 13, 13) solid 2px;
+  transition: 0.5s;
+}
+
+/***************************** PAGE CONTACT *****************************/
 /*Formulaire Contact*/
 .Contactez-moi {
   display: flex;
@@ -236,4 +308,3 @@ form button:hover {
   background-color: white;
   transition: 0.3s;
 }
-/* fin de formulaire de contact */

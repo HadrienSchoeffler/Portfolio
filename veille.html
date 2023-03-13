@@ -4,20 +4,84 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="../image/logo.png" />
   </head>
-  <header class="header">
-    <h1><a href="index.html">Hadrien Schoeffler | Portfolio</a></h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="profil.html">Profil</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="veille.html">Veille Technologique</a></li>
-        <li><a href="contact.html">Contactez-moi</a></li>
-      </ul>
-    </nav>
-  </header>
   <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="titre">Hadrien Schoeffler | Portfolio</a>
+        <div class="navlinks">
+          <ul>
+            <li>
+              <a href="index.html"><strong>ACCUEIL</strong></a>
+            </li>
+            <li>
+              <a href="profil.html"><strong>PROFIL</strong> </a>
+            </li>
+            <li>
+              <a href="projets.html"><strong>PROJETS</strong></a>
+            </li>
+            <li>
+              <a href="veille.html"><strong>VEILLE TECHNOLOGIQUE</strong></a>
+            </li>
+            <li>
+              <a href="contact.html"><strong>CONTACTEZ-MOI</strong></a>
+            </li>
+          </ul>
+        </div>
+        <img
+          src="public/icone.png"
+          alt="menu hamburger"
+          class="menu-hamburger"
+        />
+      </nav>
+    </header>
+    <script>
+      const menuHamburger = document.querySelector(".menu-hamburger");
+      const navLinks = document.querySelector(".navlinks");
+
+      menuHamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("mobile-menu");
+      });
+    </script>
     <div class="box"><p>Veille Technologique</p></div>
-    <p>ok</p>
+  <div class="page">
+    <div class="Veille">
+      <h1>Qu'est-ce qu'une veille technologique ?</h1>
+      <br />
+      <p>
+        Une veille technologique consiste à s'informer de façon systématique sur
+        les techniques les plus récentes et surtout sur leur mise à disposition
+        commerciale. Cette activité met en œuvre des techniques d'acquisition,
+        de stockage et d'analyse d'informations et leur distribution automatique
+        aux différentes sections concernées de l'entreprise, à la manière d'une
+        revue de presse.Ces informations peuvent concerner un produit, un
+        composant, un procédé, ou bien l’évolution d’une technique utilisée au
+        sein d’une entreprise par exemple.
+      </p>
+      <br />
+      <h1>Prise d'informations</h1><br>
+      <p>
+        <h3>Où chercher ?</h3><br>
+        <ul>
+          <li>Moteurs de recherches comme Google, Firefox, Yahoo</li>
+          <li>Moteurs de flux (RSS) comme GoogleAlerts ou Feedly</li>
+          <li>Moteurs d'actualités comme l'onglet actualité de Google</li>
+        </ul><br>
+        <h3>Quels sont les sources ?</h3><br>
+        <ul>
+          <li>les sites spécialisés</li>
+          <li>les sites d'actualités</li>
+          <li>les blogs</li>
+          <li>les articles de presse</li>
+          <li>les vidéos</li>
+        </ul>
+      </p><br>
+      <h1>Ma Veille Technologique</h1><br>
+      <p>
+        <h3>La reconnaissance veineuse</h3><br>
+        <p>La reconnaissance veineuse est une technique de biométrie permettant de reconnaitre une personne par l'observation de son empreinte extraite de son système veineux, souvent à partir d'un doigt ou de la paume de la main.</p><br>
+        <a href="https://feedly.com/i/board/content/user/bab9188a-1f1c-49e5-8746-9a642a7f4a4d/tag/ff05d985-f7a0-44d8-85da-5cada431d302" class="feedly" target="_blank"><center>Flux RSS sur Feedly</center></cent></a>
+      </p>
+    </div>
+  </div>
   </body>
 </html>

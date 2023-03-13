@@ -1,82 +1,114 @@
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
   font-family: Arial, sans-serif;
 }
 
 /***************************** TITRE DE LA PAGE *****************************/
-.header {
-  background-color: white;
-  text-align: center;
-}
-.header h1 {
-  margin-bottom: 5px;
-}
-.header h1,
-a {
-  color: black;
-  text-decoration: none;
-}
-.header h1,
-a:hover {
-  color: black;
-}
 
 /***************************** MENU DÉROULANT *****************************/
-nav ul {
-  list-style-type: none;
+header {
+  height: 100px;
+  width: 100vw;
+  background-color: rgb(22, 34, 46);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  z-index: 999 !important;
 }
-nav {
+.navbar {
+  position: absolute;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  margin: 0 auto;
-  background-color: white;
+  box-sizing: border-box;
+  position: sticky;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.navbar a {
+  color: rgb(183, 100, 47);
+}
+.navbar .titre {
+  font-size: 2em;
+  font-weight: bold;
+  color: rgb(144, 59, 5);
+  text-shadow: rgb(22, 34, 46) 1px 1px, rgb(22, 34, 46) -1px 1px,
+    rgb(22, 34, 46) -1px -1px, rgb(22, 34, 46) 1px -1px;
+}
+.navbar .navlinks ul {
+  display: flex;
+  list-style: none;
 }
 
-nav li {
-  float: left;
-  width: 20%;
-  text-align: center;
+.navbar .navlinks ul li {
+  margin: 0 30px;
 }
-
-nav ul::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-nav a {
-  display: block;
-  text-decoration: none;
-  color: black;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-radius: 0px;
-  padding: 10px 0px;
-}
-nav a:hover {
+.navbar .navlinks ul li:hover a {
   color: white;
-  background-color: black;
-  border-radius: 0px;
   transition: 0.3s;
+
+  /* border-bottom: rgb(183, 100, 47) solid 2px; */
 }
 
+.navbar .menu-hamburger {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 50px;
+  width: 35px;
+}
+
+@media screen and (max-width: 1350px) {
+  .navbar {
+    padding: 30px;
+  }
+  .navbar .menu-hamburger {
+    display: block;
+  }
+  .navlinks {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%;
+    transition: all 0.5s ease;
+  }
+  .navlinks.mobile-menu {
+    margin-left: 0;
+  }
+  .navlinks ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar .navlinks ul li {
+    color: rgb(183, 100, 47);
+    margin: 30px 0;
+  }
+}
 /***************************** PAGE D'ACCUEIL *****************************/
-.boxaccueil {
-  margin: 0;
-  padding: 0;
+body {
   background-image: url(../public/fondentier.png);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .boxaccueil p {
-  margin-top: 100px;
-  margin-left: 100px;
   color: white;
   font-size: 250%;
+  margin: 15%;
   text-align: left;
+  position: absolute;
 }
 .boutonaccueil {
-  margin: 25px;
+  margin-top: 10px;
   font-size: 50%;
   color: black;
   text-decoration: none;
@@ -92,45 +124,56 @@ nav a:hover {
   transition: 0.3s;
 }
 
-/***************************** BANDEREAU *****************************/
+/*modèle de page*/
 .box {
-  background-image: url(../public/fondbandeau.png);
-  background-size: cover;
-  padding: 5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -400%);
 }
 .box p {
   color: white;
+  font-size: 300%;
   text-align: center;
-  font-size: 250%;
 }
+.page {
+  color: white;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 20%;
+  padding: 30px;
+  background-color: transparent;
+  position: absolute;
+  border-radius: 10px;
+  border: 3px solid white;
+}
+
 /***************************** PAGE PROFIL *****************************/
-.Profil {
-  margin-left: 10%;
-  margin-right: 10%;
-}
+
 .profiltitre {
   padding: 10px;
 }
-.Profil h3 {
+.page h3 {
   margin-left: 20px;
 }
-.Profil p {
+.page p {
   margin-left: 20px;
 }
 .boutonCV {
   color: white;
+  margin-left: 20px;
   text-decoration: none;
-  background-color: black;
-  border: black solid 2px;
+  background-color: rgb(22, 34, 46);
+  border: rgb(22, 34, 46) solid 2px;
   padding: 0.8em 1em;
   position: relative;
   display: inline-block;
   margin-bottom: 20px;
 }
 .boutonCV:hover {
-  color: black;
-  background-color: white;
-  transition: 0.5s;
+  color: white;
+  background-color: rgb(183, 100, 47);
+  transition: 0.3s;
 }
 
 /***************************** PAGE PROJETS *****************************/
@@ -143,11 +186,28 @@ nav a:hover {
   margin-top: 20px;
   text-align: left;
 }
+.BoutonCompétence {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  margin-left: 22em;
+  margin-right: 22em;
+  background-color: rgb(22, 34, 46);
+  border: rgb(22, 34, 46) solid 2px;
+  padding: 0.8em 1em;
+  margin-bottom: 20px;
+}
+.BoutonCompétence:hover {
+  color: white;
+  background-color: rgb(183, 100, 47);
+  transition: 0.3s;
+}
 .tabprojet {
   background-color: lightgrey;
   margin: 10px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   padding: 10px;
   border-radius: 5px;
 }
@@ -158,7 +218,7 @@ nav a:hover {
 }
 .tabprojet table,
 td {
-  border: rgb(173, 13, 13) solid 2px;
+  border: rgb(22, 34, 46) solid 2px;
 }
 .tabprojet table,
 td,
@@ -170,7 +230,7 @@ h1 {
 .tabprojet thead,
 tfoot {
   color: white;
-  background-color: rgb(173, 13, 13);
+  background-color: rgb(22, 34, 46);
   font-size: 150%;
 }
 .tabprojet td,
@@ -180,40 +240,73 @@ p {
   text-align: left;
 }
 .boutongithub {
-  color: black;
-  text-decoration: none;
-  margin-left: 10px;
-  background-color: white;
-  border: black solid 2px;
+  color: white;
+  background-color: rgb(22, 34, 46);
+  border: rgb(22, 34, 46) solid 2px;
   padding: 0.5em 0.75em;
   position: relative;
-  display: inline-block;
+  display: block;
+  margin-left: 20em;
+  margin-right: 20em;
+  text-align: center;
   margin-bottom: 20px;
 }
 .boutongithub:hover {
   color: white;
-  background-color: rgb(173, 13, 13);
-  border: rgb(173, 13, 13) solid 2px;
-  transition: 0.5s;
+  background-color: rgb(183, 100, 47);
+  transition: 0.3s;
+}
+/***************************** PAGE VEILLE *****************************/
+.Veille {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.Veille h1 {
+  text-align: left;
+}
+
+.Veille p {
+  text-align: left;
+  list-style-type: disc;
+}
+.Veille ul {
+  margin-left: 30px;
+}
+.feedly {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  margin-left: 22em;
+  margin-right: 22em;
+  background-color: rgb(22, 34, 46);
+  border: rgb(22, 34, 46) solid 2px;
+  padding: 0.8em 1em;
+  margin-bottom: 20px;
+}
+.feedly:hover {
+  color: white;
+  background-color: rgb(183, 100, 47);
+  transition: 0.3s;
 }
 
 /***************************** PAGE CONTACT *****************************/
 /*Formulaire Contact*/
 .Contactez-moi {
   display: flex;
-  justify-content: center;
   color: black;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
+  position: absolute;
+  background-color: white;
 }
 .Contactez-moi {
   width: 700px;
   border: 1px solid black;
   border-radius: 8px;
   padding: 0 50px 0 5px;
-  margin: auto;
-  margin-top: 50px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 17%;
 }
 
 .Contactez-moi > h2 {
@@ -246,7 +339,7 @@ form div > input,
 form div > select,
 form div > textarea {
   color: white;
-  background: black;
+  background: rgb(22, 34, 46);
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -297,14 +390,14 @@ form button {
   height: 50px;
   font-weight: 700;
   font-size: 20px;
-  background: black;
+  background: rgb(22, 34, 46);
   border: rgba(48, 48, 48, 0.5) solid 1px;
   border-radius: 5px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   color: white;
 }
 form button:hover {
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: rgb(183, 100, 47);
   transition: 0.3s;
 }

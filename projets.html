@@ -4,138 +4,205 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="../public/logo.png" />
   </head>
-  <header class="header">
-    <h1><a href="index.html">Hadrien Schoeffler | Portfolio</a></h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="profil.html">Profil</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="veille.html">Veille Technologique</a></li>
-        <li><a href="contact.html">Contactez-moi</a></li>
-      </ul>
-    </nav>
-  </header>
   <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="titre">Hadrien Schoeffler | Portfolio</a>
+        <div class="navlinks">
+          <ul>
+            <li>
+              <a href="index.html"><strong>ACCUEIL</strong></a>
+            </li>
+            <li>
+              <a href="profil.html"><strong>PROFIL</strong> </a>
+            </li>
+            <li>
+              <a href="projets.html"><strong>PROJETS</strong></a>
+            </li>
+            <li>
+              <a href="veille.html"><strong>VEILLE TECHNOLOGIQUE</strong></a>
+            </li>
+            <li>
+              <a href="contact.html"><strong>CONTACTEZ-MOI</strong></a>
+            </li>
+          </ul>
+        </div>
+        <img
+          src="public/icone.png"
+          alt="menu hamburger"
+          class="menu-hamburger"
+        />
+      </nav>
+    </header>
+    <script>
+      const menuHamburger = document.querySelector(".menu-hamburger");
+      const navLinks = document.querySelector(".navlinks");
+
+      menuHamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("mobile-menu");
+      });
+    </script>
     <div class="box"><p>Mes Projets</p></div>
-    <div class="projets">
-      <div class="introduction">
-        <p>
-          Ces projets ont été réalisés tout au long de mon parcours de BTS SIO,
-          lors de ma formation et lors de mes stages professionnelles.
-        </p>
+    <div class="page">
+      <div class="projets">
+        <div class="introduction">
+          <p>
+            Ces projets ont été réalisés tout au long de mon parcours de BTS
+            SIO, lors de ma formation et lors de mes stages professionnelles.
+          </p>
+          <br />
+          <a
+            href="public\Tableau des Compétences.pdf"
+            class="BoutonCompétence"
+            target="_blank"
+            >👁 Tableau des Compétences</a
+          >
+        </div>
+        <div class="typeprojettitre">
+          <h1>➤ Projets réalisés en cours de formation</h1>
+        </div>
+        <section class="tabprojet">
+          <table>
+            <thead>
+              <tr>
+                <th colspan="1">Festival - Site</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td width="100%">
+                  <br />
+                  <p>
+                    Ce projet a été réalisé en première année par notre groupe
+                    composé de 4 personnes. Ce projet a pour but de faire
+                    fonctionner le site donné dans le Contexte de la M2L truffé
+                    d'erreurs.
+                  </p>
+                  <br />
+                  <a
+                    href="https://github.com/HadrienSchoeffler/Festival-fonctionnement-site.git"
+                    class="boutongithub"
+                    target="_blank"
+                    >Ressources du Projet
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+        </section>
+        <section class="tabprojet">
+          <table>
+            <thead>
+              <tr>
+                <th colspan="1">Festival - architecture MVC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td width="100%">
+                  <br />
+                  <p>
+                    Ce projet a été réalisé en deuxième année par notre groupe
+                    composé de 3 personnes. Il a pour pour but d'appliquer
+                    l'architecure MVC au site de la M2L fait l'année d'avant.
+                  </p>
+                  <br />
+                  <a
+                    href="https://github.com/APFestivalGroupeB/FestivalSiteMVC.git"
+                    class="boutongithub"
+                    target="_blank"
+                    >Ressources du Projet
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+        </section>
+        <section class="tabprojet">
+          <table>
+            <thead>
+              <tr>
+                <th colspan="2">Gestion du personnel des Ligues</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td width="100%">
+                  <br />
+                  <p>
+                    Ce projet a été réalisé en deuxième année par notre groupe
+                    composé de 3 étudiants, dont moi-même. Nous avions 2 séances
+                    de 4h pour le mettre à bien. Voici la
+                    <a
+                      href="public\Présentation Projet Gestion Personnel.pdf"
+                      target="_blank"
+                      >Présentation du Projet</a
+                    >
+                  </p>
+                  <br />
+                  <a
+                    href="https://github.com/APFestivalGroupeB/personnel.git"
+                    class="boutongithub"
+                    target="_blank"
+                    >Ressources du Projet
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <div class="typeprojettitre">
+          <h1>➤ Projets réalisés pendant les stages</h1>
+        </div>
+        <section class="tabprojet">
+          <table>
+            <thead>
+              <tr>
+                <th colspan="2">
+                  Déploiement et refonte du parc informatique d'une entreprise
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td width="100%">
+                  <br />
+                  <p>rien</p>
+                  <br />
+                  <a href="" class="boutongithub" target="_blank"
+                    >Ressources du Projet
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+        </section>
+        <section class="tabprojet">
+          <table>
+            <thead>
+              <tr>
+                <th colspan="2">Refonte du site Web d'une entreprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td width="100%">
+                  <br />
+                  <p>rien</p>
+                  <br />
+                  <a href="" class="boutongithub" target="_blank"
+                    >Ressources du Projet
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+        </section>
       </div>
-      <div class="typeprojettitre">
-        <h1>➤ Projets réalisés en cours de formation</h1>
-      </div>
-      <section class="tabprojet">
-        <table>
-          <thead>
-            <tr>
-              <th colspan="2">Festival</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td width="90%">
-                <h1>Contexte</h1>
-                <p>
-                  bnfhukvrqzvbhviki qguzfvihebfvsrsygfrsdb hgiktess bjlbtestgbs
-                  dggtd sht serhtr snthrs hjty sdr,hy h grqe gh setnht rdbg
-                  dtrbn dytrtgt trs hgvqetg jhtrsed hns ryfdtyh ndtyrfg
-                  fhygbetsdxgfjh qershjrsdth set h trs
-                </p>
-                <br />
-                <a
-                  href="https://github.com/APFestivalGroupeB/FestivalSiteMVC.git"
-                  class="boutongithub"
-                  target="_blank"
-                  >Ressources du Projet
-                </a>
-              </td>
-              <td width="10%">
-                <h1>Compétences</h1>
-                <p>nbjihvlrqbvjievhsuqbfvfvojsvuO</p>
-                <p></p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <br />
-      </section>
-      <section class="tabprojet">
-        <table>
-          <thead>
-            <tr>
-              <th colspan="2">Gestion du personnel des Ligues</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td width="90%">
-                <h1>Contexte</h1>
-                <p>
-                  bnfhukvrqzvbhviki qguzfvihebfvsrsygfrsdb hgiktess bjlbtestgbs
-                  dggtd sht serhtr snthrs hjty sdr,hy h grqe gh setnht rdbg
-                  dtrbn dytrtgt trs hgvqetg jhtrsed hns ryfdtyh ndtyrfg
-                  fhygbetsdxgfjh qershjrsdth set h trs
-                </p>
-                <br />
-                <a
-                  href="https://github.com/APFestivalGroupeB/personnel.git"
-                  class="boutongithub"
-                  target="_blank"
-                  >Ressources du Projet
-                </a>
-              </td>
-              <td width="10%">
-                <h1>Compétences</h1>
-                <p>nbjihvlrqbvjievhsuqbfvfvojsvuO</p>
-                <p></p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <div class="typeprojettitre">
-        <h1>➤ Projets réalisés pendant les stages</h1>
-      </div>
-      <section class="tabprojet">
-        <table>
-          <thead>
-            <tr>
-              <th colspan="2">Festival</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td width="90%">
-                <h1>Contexte</h1>
-                <p>
-                  bnfhukvrqzvbhviki qguzfvihebfvsrsygfrsdb hgiktess bjlbtestgbs
-                  dggtd sht serhtr snthrs hjty sdr,hy h grqe gh setnht rdbg
-                  dtrbn dytrtgt trs hgvqetg jhtrsed hns ryfdtyh ndtyrfg
-                  fhygbetsdxgfjh qershjrsdth set h trs
-                </p>
-                <br />
-                <a
-                  href="https://github.com/APFestivalGroupeB/FestivalSiteMVC.git"
-                  class="boutongithub"
-                  target="_blank"
-                  >Ressources du Projet
-                </a>
-              </td>
-              <td width="10%">
-                <h1>Compétences</h1>
-                <p>nbjihvlrqbvjievhsuqbfvfvojsvuO</p>
-                <br />
-                <p></p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <br />
-      </section>
     </div>
   </body>
 </html>

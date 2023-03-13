@@ -6,26 +6,54 @@
     <!--titre de la page-->
     <title>Portfolio-Accueil</title>
   </head>
-    <header class="header"><h1><a href="index.html">Hadrien Schoeffler | Portfolio</a></h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="profil.html">Profil</a></li>
-          <li><a href="projets.html">Projets</a></li>
-          <li><a href="veille.html">Veille Technologique</a></li>
-          <li><a href="contact.html">Contactez-moi</a></li>
-        </ul>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="titre">Hadrien Schoeffler | Portfolio</a>
+        <div class="navlinks">
+          <ul>
+            <li>
+              <a href="index.html"><strong>ACCUEIL</strong></a>
+            </li>
+            <li>
+              <a href="profil.html"><strong>PROFIL</strong> </a>
+            </li>
+            <li>
+              <a href="projets.html"><strong>PROJETS</strong></a>
+            </li>
+            <li>
+              <a href="veille.html"><strong>VEILLE TECHNOLOGIQUE</strong></a>
+            </li>
+            <li>
+              <a href="contact.html"><strong>CONTACTEZ-MOI</strong></a>
+            </li>
+          </ul>
+        </div>
+        <img
+          src="public/icone.png"
+          alt="menu hamburger"
+          class="menu-hamburger"
+        />
       </nav>
     </header>
-  <body class="boxaccueil">
-    <div>
+    <script>
+      const menuHamburger = document.querySelector(".menu-hamburger");
+      const navLinks = document.querySelector(".navlinks");
+
+      menuHamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("mobile-menu");
+      });
+    </script>
+    <div class="boxaccueil">
       <p>
         Bonjour<br />
         Je m'appelle Hadrien
         <br />
         Je vous souhaite bienvenue sur mon Portfolio.
         <br />
-        <a href="profil.html" class="boutonaccueil"><strong>Continuer la visite</strong></a></div>
+        <a href="profil.html" class="boutonaccueil"
+          ><strong>Continuer la visite</strong></a
+        >
       </p>
     </div>
   </body>

@@ -4,21 +4,46 @@
     <link rel="icon" href="../public/logo.png" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <header class="header">
-    <h1><a href="index.html">Hadrien Schoeffler | Portfolio</a></h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="profil.html">Profil</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="veille.html">Veille Technologique</a></li>
-        <li><a href="contact.html">Contactez-moi</a></li>
-      </ul>
-    </nav>
-  </header>
   <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="titre">Hadrien Schoeffler | Portfolio</a>
+        <div class="navlinks">
+          <ul>
+            <li>
+              <a href="index.html"><strong>ACCUEIL</strong></a>
+            </li>
+            <li>
+              <a href="profil.html"><strong>PROFIL</strong> </a>
+            </li>
+            <li>
+              <a href="projets.html"><strong>PROJETS</strong></a>
+            </li>
+            <li>
+              <a href="veille.html"><strong>VEILLE TECHNOLOGIQUE</strong></a>
+            </li>
+            <li>
+              <a href="contact.html"><strong>CONTACTEZ-MOI</strong></a>
+            </li>
+          </ul>
+        </div>
+        <img
+          src="public/icone.png"
+          alt="menu hamburger"
+          class="menu-hamburger"
+        />
+      </nav>
+    </header>
+    <script>
+      const menuHamburger = document.querySelector(".menu-hamburger");
+      const navLinks = document.querySelector(".navlinks");
+
+      menuHamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("mobile-menu");
+      });
+    </script>
     <div class="box"><p>Profil</p></div>
-    <div class="profil">
+    <div class="page">
       <div class="profiltitre"><h2>➤ A propos de moi</h2></div>
       <p>
         Je m'appelle Hadrien Schoeffler, je suis âgé de 20 ans. Je suis

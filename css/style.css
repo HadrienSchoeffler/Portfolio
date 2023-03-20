@@ -124,7 +124,7 @@ body {
   transition: 0.3s;
 }
 
-/*modèle de page*/
+/******************************modèle de page****************************/
 .box {
   position: absolute;
   top: 50%;
@@ -137,15 +137,18 @@ body {
   text-align: center;
 }
 .page {
-  color: white;
   margin-left: 15%;
   margin-right: 15%;
   margin-top: 20%;
   padding: 30px;
-  background-color: transparent;
+  background-color: grey;
+  /* opacity: 35%; */
   position: absolute;
   border-radius: 10px;
   border: 3px solid white;
+}
+.paragraphe {
+  color: white;
 }
 
 /***************************** PAGE PROFIL *****************************/
@@ -210,6 +213,7 @@ body {
   margin-right: 5%;
   padding: 10px;
   border-radius: 5px;
+  list-style-type: none;
 }
 
 .tabprojet table {

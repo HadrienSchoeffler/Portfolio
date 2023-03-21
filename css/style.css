@@ -124,37 +124,33 @@ body {
   transition: 0.3s;
 }
 
-/******************************modèle de page****************************/
+/******************************MODELE DE PAGE****************************/
 .box {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -400%);
+  transform: translate(-50%, -450%);
 }
 .box p {
   color: white;
   font-size: 300%;
-  text-align: center;
 }
 .page {
   margin-left: 15%;
   margin-right: 15%;
-  margin-top: 20%;
+  margin-top: 15%;
   padding: 30px;
-  background-color: grey;
-  /* opacity: 35%; */
+  background-color: rgba(128, 128, 128, 0.5);
   position: absolute;
   border-radius: 10px;
   border: 3px solid white;
-}
-.paragraphe {
   color: white;
 }
-
 /***************************** PAGE PROFIL *****************************/
 
 .profiltitre {
-  padding: 10px;
+  padding: 15px;
+  color: rgb(183, 100, 47);
 }
 .page h3 {
   margin-left: 20px;
@@ -180,14 +176,18 @@ body {
 }
 
 /***************************** PAGE PROJETS *****************************/
-.introduction p {
+.introduction {
   text-align: center;
   margin-top: 10px;
+}
+.introduction p {
+  text-align: center;
 }
 .typeprojettitre h1 {
   padding-left: 10%;
   margin-top: 20px;
   text-align: left;
+  color: rgb(183, 100, 47);
 }
 .BoutonCompétence {
   color: white;
@@ -250,8 +250,8 @@ p {
   padding: 0.5em 0.75em;
   position: relative;
   display: block;
-  margin-left: 20em;
-  margin-right: 20em;
+  margin-left: 35%;
+  margin-right: 35%;
   text-align: center;
   margin-bottom: 20px;
 }

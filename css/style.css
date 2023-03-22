@@ -140,7 +140,7 @@ body {
   margin-right: 15%;
   margin-top: 15%;
   padding: 30px;
-  background-color: rgba(128, 128, 128, 0.5);
+  background-color: rgba(128, 128, 128, 0.6);
   position: absolute;
   border-radius: 10px;
   border: 3px solid white;
@@ -238,9 +238,18 @@ body {
   width: 100%;
   background-color: transparent;
 }
+.tabprojet caption {
+  background-color: rgb(22, 34, 46);
+  color: white;
+  font-size: 150%;
+  font-weight: bolder;
+  padding: 5px;
+  border-bottom: lightgrey solid 2px;
+}
 .tabprojet table,
 td {
   border: rgb(22, 34, 46) solid 2px;
+  border-collapse: collapse;
 }
 .tabprojet table,
 td,
@@ -249,17 +258,21 @@ h1 {
   text-align: center;
   margin-top: 5px;
 }
-.tabprojet thead,
-tfoot {
-  color: white;
-  background-color: rgb(22, 34, 46);
-  font-size: 150%;
-}
 .tabprojet td,
 p {
   margin-left: 10px;
   margin-right: 10px;
-  text-align: left;
+  text-align: center;
+}
+.tabprojet img {
+  width: auto;
+  max-height: 90px;
+  margin-top: -10px;
+}
+@media screen and (max-width: 500px) {
+  .langages {
+    width: 100%;
+  }
 }
 .boutongithub {
   color: white;
@@ -268,8 +281,8 @@ p {
   padding: 0.5em 0.75em;
   position: relative;
   display: block;
-  margin-left: 35%;
-  margin-right: 35%;
+  margin-left: 25%;
+  margin-right: 25%;
   text-align: center;
   margin-bottom: 20px;
 }

@@ -157,6 +157,7 @@ body {
 }
 .page p {
   margin-left: 20px;
+  text-align: left;
 }
 .boutonCV {
   color: white;

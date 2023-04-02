@@ -296,15 +296,15 @@ p {
   background-color: var(--orange);
   transition: 0.3s;
 }
-/*page projet*/
+/*page veille*/
 .veille-content h3 {
-  color: var(--orange);
+  color: white;
   font-size: 30px;
 }
 .veille-content h4 {
   margin-left: 20px;
   font-size: 20px;
-  color: var(--bleu);
+  color: var(--orange);
 }
 .veille-content p {
   text-align: left;
@@ -319,7 +319,7 @@ p {
 ul.chronologie {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 40px;
 }
 
 ul.chronologie li {

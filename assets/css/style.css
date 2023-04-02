@@ -1,0 +1,377 @@
+* {
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+:root {
+  --orange: rgb(238, 135, 45);
+  --bleu: rgb(22, 34, 46);
+}
+
+/*background image*/
+body {
+  background-image: url("../public/img/backgroundimage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+/* menu-déroulant */
+header {
+  display: flex; /* Utilisation de flexbox pour positionner les éléments */
+  align-items: center; /* Alignement vertical des éléments au centre */
+  justify-content: space-between; /* Espacement horizontal entre les éléments */
+  position: fixed; /* Position fixe pour rester en haut de la page */
+  top: 0; /* Positionnement en haut de la page */
+  left: 0; /* Positionnement à gauche de la page */
+  right: 0; /* Positionnement à droite de la page */
+  height: 100px; /* Hauteur de l'en-tête */
+  /* background-color: rgb(21, 31, 43, 0.8); Couleur de fond transparente */
+  background-image: url("../public/img/backgroundimage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  padding: 0 50px; /* Espacement intérieur */
+  z-index: 9999;
+}
+
+header h1 {
+  margin: 0; /* Supprime les marges par défaut */
+  font-size: 2em; /* Taille de police */
+}
+header h1 a {
+  color: white;
+}
+
+nav ul {
+  list-style: none; /* Supprime les puces de la liste */
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime les espacements par défaut */
+  display: flex; /* Utilisation de flexbox pour positionner les éléments */
+  align-items: center; /* Alignement vertical des éléments au centre */
+}
+nav ul li {
+  margin-left: 20px; /* Espacement entre les éléments de la liste */
+  position: relative; /* Positionnement relatif pour le pseudoelement */
+}
+
+nav ul li a {
+  color: white; /* Couleur du texte */
+  text-decoration: none; /* Supprime les soulignements */
+  font-size: 20px; /* Taille de police */
+  font-weight: bold; /* Poids de la police */
+  display: inline-block; /* Affichage en ligne avec largeur et hauteur configurables */
+  padding: 10px 20px; /* Espacement intérieur */
+  border-bottom: 2px solid transparent;
+}
+
+nav ul li:hover a {
+  color: var(--orange); /* Couleur du texte au survol */
+  border-color: var(--orange);
+  transition: linear 0.3s; /* Animation de transition */
+}
+
+/*page d'accueil*/
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-weight: bold;
+  color: white;
+  font-size: 25px;
+  height: calc(
+    100vh - 100px
+  ); /* Soustraire la hauteur du menu (60px) de la hauteur totale (100vh) */
+  padding-left: 15%;
+  margin-top: 0;
+}
+.home h1 {
+  color: var(--orange);
+  font-weight: bold;
+}
+
+.homebutton {
+  display: inline-block;
+  background-color: white;
+  color: var(--bleu);
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 2px;
+  border: 3px solid white;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.homebutton:hover {
+  color: white;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+/*Page profil*/
+
+/* Centrer horizontalement la zone de contenu et le titre */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Titre centré horizontalement, positionné au milieu entre le menu et la zone de contenu */
+h2 {
+  margin-top: 150px;
+  margin-bottom: 20px;
+  font-size: 50px;
+  color: white;
+}
+
+/* Zone de contenu centrée horizontalement, prenant 50% de la largeur */
+.pagemodel {
+  width: 66%;
+  margin-bottom: 30px;
+  border: 4px solid var(--orange);
+  background-color: rgba(94, 94, 94, 0.9);
+  border-radius: 10px;
+  padding: 30px;
+  font-size: 18px;
+}
+/* Ajouter un peu de marge autour de la zone de contenu */
+.profil-content > * {
+  color: white;
+}
+.profil-content h3 {
+  margin-left: 20px;
+}
+.profil-content h4 {
+  margin-left: 40px;
+}
+.profil-content p {
+  margin-left: 20px;
+  text-align: left;
+}
+.row {
+  display: flex;
+  width: 100px;
+  margin-left: 50px;
+}
+.langages {
+  flex: 25%;
+  padding: 10px;
+}
+.langages img {
+  width: auto;
+  max-height: 75px;
+}
+@media screen and (max-width: 500px) {
+  .langages {
+    width: 100%;
+  }
+}
+
+.cvbutton {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  background-color: var(--bleu);
+  border: var(--bleu) solid 2px;
+  padding: 0.8em 1em;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.cvbutton:hover {
+  color: white;
+  background-color: var(--orange);
+  transition: 0.3s;
+}
+
+/*page projet*/
+.projets-content h3 {
+  margin-left: 40px;
+  text-align: left;
+  color: var(--orange);
+  font-size: 30px;
+}
+.projets-content h4 {
+  margin-left: 50px;
+  color: white;
+}
+.rappel p {
+  text-align: left;
+  color: white;
+  text-indent: 40px;
+}
+
+.introduction {
+  text-align: center;
+  margin-top: 10px;
+}
+.introduction p {
+  text-align: center;
+  color: white;
+}
+.BoutonCompétence {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  margin: 0 auto; /* mettre margin-left: 0; et margin-right: 0; */
+  background-color: var(--bleu);
+  border: var(--bleu) solid 2px;
+  padding: 0.8em 1em;
+  margin-bottom: 20px;
+}
+
+.BoutonCompétence:hover {
+  color: white;
+  background-color: var(--orange);
+  transition: 0.3s;
+}
+.tabprojet {
+  background-color: lightgrey;
+  margin: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 10px;
+  border-radius: 5px;
+  list-style-type: none;
+}
+
+.tabprojet table {
+  width: 100%;
+  background-color: transparent;
+}
+.tabprojet caption {
+  background-color: var(--bleu);
+  color: white;
+  font-size: 150%;
+  font-weight: bolder;
+  padding: 5px;
+  border-bottom: lightgrey solid 2px;
+}
+.tabprojet table,
+td {
+  border: var(--bleu) solid 2px;
+  border-collapse: collapse;
+}
+.tabprojet table,
+td,
+h1 {
+  background-color: transparent;
+  text-align: center;
+  margin-top: 5px;
+}
+.tabprojet h4 {
+  color: var(--orange);
+  text-align: left;
+}
+.tabprojet td,
+p {
+  margin: 20px;
+  text-align: left;
+}
+.tabprojet img {
+  width: auto;
+  max-height: 90px;
+  display: block;
+  margin: 0 auto;
+}
+
+.boutongithub {
+  color: white;
+  display: block;
+  background-color: var(--bleu);
+  border: var(--bleu) solid 2px;
+  padding: 0.5em 0.5em;
+  text-align: center;
+  margin: 0 auto;
+  width: 250px;
+  margin-bottom: 20px;
+}
+.boutongithub:hover {
+  color: white;
+  background-color: var(--orange);
+  transition: 0.3s;
+}
+/*page projet*/
+.veille-content h3 {
+  color: var(--orange);
+  font-size: 30px;
+}
+.veille-content h4 {
+  margin-left: 20px;
+  font-size: 20px;
+  color: var(--bleu);
+}
+.veille-content p {
+  text-align: left;
+  list-style-type: disc;
+  text-indent: 2em;
+  color: white;
+}
+.veille-content ul {
+  margin-left: 30px;
+  color: white;
+}
+ul.chronologie {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.chronologie li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+ul.chronologie li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px;
+  background-color: var(--orange);
+}
+
+ul.chronologie li .date {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--orange);
+}
+
+ul.chronologie li .description {
+  line-height: 1.4;
+}
+
+.feedly {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  background-color: var(--bleu);
+  border: var(--bleu) solid 2px;
+  padding: 0.8em 1em;
+  margin-bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.feedly:hover {
+  color: white;
+  background-color: var(--orange);
+  transition: 0.3s;
+}
+.sources ul li {
+  margin-bottom: 10px;
+}
+.sources a {
+  color: white;
+}
+.sources a:hover {
+  color: blue;
+}

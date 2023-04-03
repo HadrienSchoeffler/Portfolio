@@ -199,6 +199,9 @@ h2 {
   margin-left: 50px;
   color: white;
 }
+.projets-content h5 {
+  margin-left: 20px;
+}
 .rappel p {
   text-align: left;
   color: white;
@@ -275,7 +278,7 @@ p {
 }
 .tabprojet img {
   width: auto;
-  max-height: 90px;
+  max-height: 400px;
   display: block;
   margin: 0 auto;
 }
